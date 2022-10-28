@@ -99,7 +99,7 @@ class Lesson(models.Model):
 
 
 class CourseTeacher(models.Model):
-    courses = models.ManyToManyField(Course)
+    course = models.ManyToManyField(Course)
     first_name = models.CharField(max_length=256, verbose_name='Имя')
     last_name = models.CharField(max_length=256, verbose_name='Фамилия')
     day_birth = models.DateField(verbose_name="Birth date", default='')
