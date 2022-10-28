@@ -1,0 +1,106 @@
+[
+    {
+        "model": "mainapp.course",
+        "pk": 1,
+        "fields": {
+            "title": "Web Python",
+            "description": "Курс Web Python позволит вам освоить язык программирования Python, а также разобраться с его основными аспектами: модулями, парсерами и  регулярными выражениями. Курс направлен на то, чтобы вы научились составлять эффективные программы для решения своих задач. Он научит вас создавать собственные веб-приложения для работы с базами данных и сайтами. Вы сможете использовать Python для изучения Java, Ruby, PHP, C, C ++, C # или любого другого языка программирования.\r\nНа курсе Web Python проходит изучение веб-фреймворков Django, Bootstrap и Flask.\r\nВо втором семестре вы изучите такие инструменты и методы, как:\r\n\r\n* PHP и MySql;\r\n* Работа с файлами DOC, EXCEL, PATH;\r\n* Реляционная и объектная модель базы данных;\r\n* Создание и управление пакетами;\r\n* Как работать с FTP-сервером;\r\n* Настройка среды и создание сайтов;\r\n* Веб-серверы;\r\n* Конфигурационное управление в Unix и Windows;\r\n* Инструменты для создания сайта;\r\n* Интеграция внешних приложений;\r\n* Расширения;",
+            "description_as_markdown": true,
+            "cost": "10000.50",
+            "cover": "img/course001.jpg",
+            "created_at": "2021-07-11T08:24:53.084Z",
+            "updated_at": "2021-07-11T09:06:35.322Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 2,
+        "fields": {
+            "title": "Web Golang",
+            "description": "На курсе Web Golang вы изучите основы Go, получите практические навыки реализации проектов на Golang и научитесь работать в распределённых средах разработки. Вы узнаете, что такое Go, как компилировать код Go и писать тесты. Выясните, как работает веб-сервер. Курс ведёт Виктор Иванов\r\nСертифицированный специалист Google Developer Expert (Certified Technical Professional).\r\nАвтор учебника «Веб-разработка на Go». На курсе вы изучите основы языка программирования Go и получите практический опыт реализации проектов на Go.",
+            "description_as_markdown": false,
+            "cost": "9009.99",
+            "cover": "img/course002.jpg",
+            "created_at": "2021-07-11T08:28:07.397Z",
+            "updated_at": "2021-07-11T09:06:40.127Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 3,
+        "fields": {
+            "title": "Web JavaScript",
+            "description": "Курс JavaScript ведёт преподаватель Дмитрий Кокшаров. Он преподаёт в разных вузах, в том числе в МФТИ. ",
+            "description_as_markdown": true,
+            "cost": "2500.15",
+            "cover": "img/course003.jpg",
+            "created_at": "2021-07-11T08:31:20.301Z",
+            "updated_at": "2021-07-11T09:06:46.902Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 4,
+        "fields": {
+            "title": "Web Java",
+            "description": "На курсе Java Вы изучите язык и фреймворк Java с самых азов до продвинутого уровня.",
+            "description_as_markdown": false,
+            "cost": "10000.00",
+            "cover": "img/course004.jpg",
+            "created_at": "2021-07-11T08:34:10.771Z",
+            "updated_at": "2021-07-11T09:06:52.015Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 5,
+        "fields": {
+            "title": "Web PHP",
+            "description": "На курсе PHP вы изучите основы PHP и получите навыки работы с ним: работа с базами данных, графикой, созданием сайтов, работа в PHPEdit, обработка исключений, управление памятью, работа со строками и с файлами. ",
+            "description_as_markdown": false,
+            "cost": "9500.78",
+            "cover": "img/course005.jpg",
+            "created_at": "2021-07-11T08:36:21.087Z",
+            "updated_at": "2021-07-11T09:06:57.580Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 6,
+        "fields": {
+            "title": "Python AI",
+            "description": "На курсе Python AI вы изучите создание простых нейросетей для задач машинного зрения.",
+            "description_as_markdown": true,
+            "cost": "6660.66",
+            "cover": "img/course006.jpg",
+            "created_at": "2021-07-11T08:39:15.369Z",
+            "updated_at": "2021-07-11T09:07:04.253Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 7,
+        "fields": {
+            "title": "DevOps",
+            "description": "На курсе DevOps вы изучите основы автоматизации с Python, Git, Docker и узнаете про GitHub, Jenkins и Kubernetes.",
+            "description_as_markdown": true,
+            "cost": "7770.77",
+            "cover": "img/course007.jpg",
+            "created_at": "2021-07-11T08:40:33.347Z",
+            "updated_at": "2021-07-11T09:07:11.184Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 8,
+        "fields": {
+            "title": "3D-моделирование",
+            "description": "Курс 3D-моделирования ведёт практикующий архитектор с высшим архитектурным образованием, со стажем преподавания более 7 лет.",
+            "description_as_markdown": true,
+            "cost": "5900.00",
+            "cover": "img/no_image.svg",
+            "created_at": "2021-07-11T08:58:28.830Z",
+            "updated_at": "2021-07-11T09:07:16.651Z"
+        }
+    }
+]

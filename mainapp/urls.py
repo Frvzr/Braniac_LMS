@@ -11,6 +11,7 @@ urlpatterns = [
     path('index/', views.IndexView.as_view(), name='index'),
     path('login/', views.LoginView.as_view(), name='login'),
     path('news/', views.NewsView.as_view(), name='news'),
-    path("news/<int:page>/", views.NewsWithPaginatorView.as_view(),
-         name="news_paginator"),
+    # path('news/<int:page>/', views.NewsWithPaginatorView.as_view(), name = "news_paginator"),
+    path('news/<int:pk>/', views.NewsDetail.as_view(), name='news_detail'),
+    path('courses/<int:pk>', views.CoursesDetail.as_view(), name='courses_detail'),
 ]
