@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="ru">
 
@@ -19,11 +21,6 @@
 </head>
 
 <body>
-
-
-
-
-
   <div class="row justify-content-around align-items-center" style="height: 100vh; margin: 0px">
     <div class="text-center">
       <p>
@@ -56,13 +53,6 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
   <!-- JavaScript section -->
   <!-- Bootstrap -->
   <script src="/static/js/jquery-3.6.0.min.js"></script>
@@ -73,9 +63,7 @@
   <script src="/static/js/Chart.min.js"></script>
 
   <!-- FontAwesome -->
-  <script src="/static/js/fontawesome.all.min.js"></script>
-
-
+  <script src="{% static 'js/fontawesome.all.min.js' %}"></script>
 
 </body>
 

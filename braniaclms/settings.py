@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
-from config import key
+from config import KEY, SOCIAL_AUTH_GITHUB_KEY, SOCIAL_AUTH_GITHUB_SECRET, SOCIAL_AUTH_VK_KEY, SOCIAL_AUTH_VK_SECRET, SOCIAL_AUTH_VK_SERVICE
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = key
+SECRET_KEY = KEY
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "markdownify.apps.MarkdownifyConfig",
     'authapp',
     'mainapp',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +70,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'mainapp.context_processor.my_context_procssor'
+                'mainapp.context_processor.my_context_procssor',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -139,5 +142,21 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 AUTH_USER_MODEL = 'authapp.User'
-LOGIN_REDIRECT_URL = ''
-LOGOUT_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = 'mainapp:index'
+LOGOUT_REDIRECT_URL = 'mainapp:index'
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.vk.VKOAuth2',
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+
+SOCIAL_AUTH_GITHUB_KEY = SOCIAL_AUTH_GITHUB_KEY
+SOCIAL_AUTH_GITHUB_SECRET = SOCIAL_AUTH_GITHUB_SECRET
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = SOCIAL_AUTH_VK_KEY
+SOCIAL_AUTH_VK_OAUTH2_SECRET = SOCIAL_AUTH_VK_SECRET
+SOCIAL_AUTH_VK_OAUTH2_SERVICE = SOCIAL_AUTH_VK_SERVICE
