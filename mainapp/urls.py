@@ -14,4 +14,5 @@ urlpatterns = [
     # path('news/<int:page>/', views.NewsWithPaginatorView.as_view(), name = "news_paginator"),
     path('news/<int:pk>/', views.NewsDetail.as_view(), name='news_detail'),
     path('courses/<int:pk>', views.CoursesDetail.as_view(), name='courses_detail'),
+    
 ]
