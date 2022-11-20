@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.views import LoginView, LogoutView
+import os
 
 
 class CustomLoginView(LoginView):
@@ -85,8 +86,16 @@ class EditView(TemplateView):
         if request.POST.get('email'):
             request.user.email = request.POST.get('email')
 
-        # if request.POST.get('password'):
-        #     request.user.password = request.POST.set_password('password')
+        if request.FILES.get("avatar"):
+
+            if request.user.avatar and os.path.exists(
+                request.user.avatar.path
+            ):
+                os.remove(request.user.avatar.path)
+                request.user.avatar = request.FILES.get("avatar")
+
+# if request.POST.get('password'):
+#     request.user.password = request.POST.set_password('password')
 
         request.user.save()
 
