@@ -132,3 +132,5 @@ media/
 .config.py
 .config
 *.sqlite3
+log
+emails-tmp
