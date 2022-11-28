@@ -131,3 +131,4 @@ config.py
 media/
 .config.py
 .config
+*.sqlite3
