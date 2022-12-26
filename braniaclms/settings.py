@@ -63,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'braniaclms.urls'
@@ -171,7 +172,6 @@ SOCIAL_AUTH_VK_OAUTH2_SERVICE = SOCIAL_AUTH_VK_SERVICE
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -196,6 +196,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = 'emails-tmp'
 
 LOG_FILE = BASE_DIR / "log" / "main_log.log"
+LOCALE_PATHS = [BASE_DIR / "locale"]
+SELENIUM_DRIVER_PATH_FF = BASE_DIR / "var" / "selenium" / "geckodriver"
+
 
 LOGGING = {
     "version": 1,

@@ -1,23 +1,23 @@
 from django.db import models
 from django.conf import settings
-
+from django.utils.translation import gettext_lazy as _
 
 NULLABLE = {'blank': True, 'null': True}
 
 
 class News(models.Model):
-    title = models.CharField(max_length=256, verbose_name='Заголовок')
-    preamble = models.CharField(max_length=1024, verbose_name='Интро')
+    title = models.CharField(max_length=256, verbose_name=_('Article title'))
+    preamble = models.CharField(max_length=1024, verbose_name=_('Preamble'))
 
-    body = models.TextField(verbose_name='Содержимое', blank=True, null=True,)
+    body = models.TextField(verbose_name=_('Content'), blank=True, null=True,)
     body_as_markdown = models.BooleanField(
-        default=False, verbose_name='Разметка в формате Markdown')
+        default=False, verbose_name=_('Markdown markup'))
 
     created_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Создан', editable=False)
+        auto_now_add=True, verbose_name=_('Created'), editable=False)
     updated_at = models.DateTimeField(
-        auto_now=True, verbose_name='Обновлен', editable=False)
-    deleted = models.BooleanField(default=False, verbose_name='Удалено')
+        auto_now=True, verbose_name=_('Updated'), editable=False)
+    deleted = models.BooleanField(default=False, verbose_name=_('Deleted'))
 
     def __str__(self):
         return f'{self.pk} {self.title}'
@@ -40,20 +40,20 @@ class Course(models.Model):
 
     objects = CoursesManager()
 
-    title = models.CharField(max_length=256, verbose_name='Заголовок')
+    title = models.CharField(max_length=256, verbose_name=_('Title'))
     description = models.TextField(
-        verbose_name='Описание',  blank=True, null=True)
+        verbose_name=_('Description'),  blank=True, null=True)
 
     cost = models.DecimalField(
-        max_digits=8, decimal_places=2, verbose_name='Стоимость', default=0)
+        max_digits=8, decimal_places=2, verbose_name=_('Cost'), default=0)
 
     cover = models.CharField(
-        max_length=25, default="no_image.svg", verbose_name="Cover")
+        max_length=25, default="no_image.svg", verbose_name=_("Cover"))
 
     created_at = models.DateTimeField(
         auto_now_add=True, verbose_name='Создан', null=True, blank=True)
-    updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлен')
-    deleted = models.BooleanField(default=False, verbose_name='Удалено')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name=_('Updated'))
+    deleted = models.BooleanField(default=False, verbose_name=_('Deleted'))
 
     description_as_markdown = models.BooleanField(
         verbose_name="As markdown", default=False)
@@ -72,11 +72,12 @@ class Course(models.Model):
 
 class Lesson(models.Model):
     course = models.ForeignKey(
-        Course, on_delete=models.CASCADE, verbose_name='Курс')
-    num = models.PositiveIntegerField(default=0, verbose_name='Номер урока')
+        Course, on_delete=models.CASCADE, verbose_name=_('Course'))
+    num = models.PositiveIntegerField(
+        default=0, verbose_name=_('Lesson number'))
 
-    title = models.CharField(max_length=256, verbose_name='Заголовок')
-    description = models.TextField(verbose_name='Описание')
+    title = models.CharField(max_length=256, verbose_name=_('Title'))
+    description = models.TextField(verbose_name=_('Description'))
 
     description_as_markdown = models.BooleanField(
         verbose_name="as_markdown", default=False)
@@ -101,9 +102,9 @@ class Lesson(models.Model):
 
 class CourseTeacher(models.Model):
     course = models.ManyToManyField(Course)
-    first_name = models.CharField(max_length=256, verbose_name='Имя')
-    last_name = models.CharField(max_length=256, verbose_name='Фамилия')
-    day_birth = models.DateField(verbose_name="Birth date", default='')
+    first_name = models.CharField(max_length=256, verbose_name=_('First name'))
+    last_name = models.CharField(max_length=256, verbose_name=_('Last name'))
+    day_birth = models.DateField(verbose_name=_("Birth date"), default='')
     deleted = models.BooleanField(default=False)
 
     def __str__(self):
@@ -128,12 +129,14 @@ class CourseFeedback(models.Model):
         (1, '⭐'),
     )
 
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    course = models.ForeignKey(
+        Course, on_delete=models.CASCADE, verbose_name=_("Course"))
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
-                             on_delete=models.CASCADE)
+                             on_delete=models.CASCADE, verbose_name=_("User"))
     rating = models.SmallIntegerField(
-        choices=RATINGS, default=5, verbose_name='Рейтинг')
-    feedback = models.TextField(verbose_name='Отзыв', default='Без отзыва')
+        choices=RATINGS, default=5, verbose_name=_('Rating'))
+    feedback = models.TextField(verbose_name=_(
+        'Feedback'), default='Без отзыва',)
 
     created = models.DateTimeField(auto_now_add=True, verbose_name="Created")
     deleted = models.BooleanField(default=False)
