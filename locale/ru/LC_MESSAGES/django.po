@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-25 13:40+0500\n"
+"POT-Creation-Date: 2022-12-27 20:07+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,8 +20,59 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
+msgid "Email"
+msgstr "Почта"
+
+msgid "Age"
+msgstr "Возраст"
+
+msgid "Article title"
+msgstr "Заголовок"
+
+msgid "Preamble"
+msgstr "Вступление"
+
+msgid "Content"
+msgstr "Содержание"
+
+msgid "Markdown markup"
+msgstr "Разметка"
+
+msgid "Created"
+msgstr "Создан"
+
+msgid "Updated"
+msgstr "Обновлен"
+
+msgid "Deleted"
+msgstr "Удален"
+
+msgid "Title"
+msgstr "Название"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Cost"
+msgstr "Стоимость"
+
+msgid "Cover"
+msgstr ""
+
 msgid "Course"
 msgstr "Курс"
+
+msgid "Lesson number"
+msgstr "Номер урока"
+
+msgid "First name"
+msgstr "Имя"
+
+msgid "Last name"
+msgstr "Фамилия"
+
+msgid "Birth date"
+msgstr "Дата рождения"
 
 msgid "User"
 msgstr "Пользователь"
@@ -37,6 +88,51 @@ msgstr "Новости"
 
 msgid "Courses"
 msgstr "Курсы"
+
+msgid "Profile"
+msgstr "Профиль"
+
+msgid "Edit profile"
+msgstr "Редактировать профиль"
+
+#, fuzzy
+#| msgid "Courses"
+msgid "My courses"
+msgstr "Курсы"
+
+msgid "Moderation"
+msgstr "Модерация"
+
+msgid "Administration"
+msgstr "Администрирования"
+
+msgid "Logs"
+msgstr "Логи"
+
+msgid "Logout"
+msgstr "Выход"
+
+msgid "Login"
+msgstr "Вход"
+
+msgid "Contacts"
+msgstr "Контакты"
+
+msgid "Learn more"
+msgstr "Подробнее"
+
+msgid "Add news"
+msgstr "Добавить новость"
+
+msgid "Previous"
+msgstr "Назад"
+
+msgid "Next"
+msgstr "Вперед"
+
+#, python-format
+msgid "ambiguous option: %(option)s could match %(matches)s"
+msgstr ""
 
 #, python-brace-format
 msgid "{editor}: Editing failed"
