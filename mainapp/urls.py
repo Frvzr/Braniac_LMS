@@ -20,7 +20,7 @@ urlpatterns = [
 
     # Courses
 
-    path('courses/', cache_page(60*5)
+    path('courses/', cache_page(60*1)
          (views.CoursesListView.as_view()), name='course',),
     path('courses/<int:pk>/detail/',
          views.CourseDetailView.as_view(), name='course_detail',),

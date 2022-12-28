@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
-from config import KEY, SOCIAL_AUTH_GITHUB_KEY, SOCIAL_AUTH_GITHUB_SECRET, SOCIAL_AUTH_VK_KEY, SOCIAL_AUTH_VK_SECRET, SOCIAL_AUTH_VK_SERVICE
+from .config import KEY, SOCIAL_AUTH_GITHUB_KEY, SOCIAL_AUTH_GITHUB_SECRET, SOCIAL_AUTH_VK_KEY, SOCIAL_AUTH_VK_SECRET, SOCIAL_AUTH_VK_SERVICE
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
