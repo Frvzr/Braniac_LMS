@@ -134,3 +134,7 @@ media/
 *.sqlite3
 log
 emails-tmp
+/config.py
+.config_prod.py
+/config_prod.py
+config_prod.py

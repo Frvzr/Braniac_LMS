@@ -11,7 +11,7 @@
         {% for item in object_list %}
         <div class="card col-sm-12 col-md-6 col-lg-4 border-0">
             <a href="{% url 'mainapp:course_detail' pk=item.pk %}">
-                <img src="#" class="card-img-top" alt="...">
+                <img src="{% static item.cover %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">{{ item.title }}</h5>
                 </div>
@@ -31,8 +31,7 @@
                 {% endif %}
 
                 {% for item in page_obj.paginator.page_range %}
-                <li class="page-item {% if item == page_obj.number %}active{% endif %}"><a class="page-link"
-                        href="?page={{ item }}">{{ item }}</a></li>
+                <li class="page-item {% if item == page_obj.number %}active{% endif %}"><a class="page-link" href="?page={{ item }}">{{ item }}</a></li>
                 {% endfor %}
 
                 {% if page_obj.has_next %}
