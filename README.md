@@ -4,8 +4,11 @@
 
 ### Stack: Python, Django, (Redis, Celery - a litle), SQlite
 
+Main page
 ![alt text](https://github.com/Frvzr/Braniac_LMS/blob/main/static/img/screen_1.JPG)
 
+Contacts
 ![alt text](https://github.com/Frvzr/Braniac_LMS/blob/main/static/img/screen_contacts.JPG)
 
+Courses
 ![alt text](https://github.com/Frvzr/Braniac_LMS/blob/main/static/img/screen_courses.JPG)
